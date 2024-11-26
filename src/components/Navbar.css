@@ -1,59 +1,56 @@
-/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  position: fixed; /* Fixes navbar at the top */
+  top: 0;
+  width: 100%;
+  background-color: transparent; /* Start as transparent */
   color: white;
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition */
+}
+
+.navbar.scrolled {
+  background-color: black; /* Add a solid background on scroll */
+  padding: 10px 20px; /* Reduce padding on scroll */
 }
 
 .navbar-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #f1c40f;
+  display: flex;
+  align-items: center;
 }
 
+.navbar-logo img {
+  width: 80px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.navbar-logo svg {
+  width: 750px; /* For inline SVG, adjust width */
+  height: 750px; /* Or adjust height directly if aspect ratio is not needed */
+}
 .navbar-links {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
 .navbar-links li {
   cursor: pointer;
-  font-size: 18px;
 }
 
 .contact-btn {
   background-color: #f1c40f;
-  color: black;
-  padding: 10px 20px;
+  color: #333;
+  padding: 10px 15px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: #e0b70f;
-}
-
-/* Responsive for smaller screens */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-logo {
-    margin-bottom: 10px;
-  }
-
-  .navbar-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .contact-btn {
-    width: 100%;
-  }
+  background-color: #d4ac0d; /* Darker shade on hover */
 }

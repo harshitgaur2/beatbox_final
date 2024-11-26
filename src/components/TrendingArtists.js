@@ -1,11 +1,17 @@
 import React from "react";
 import "./TrendingArtists.css";
 
+// Import the images
+import arijit from "./arijit.png";
+import mahvesh from "./mahvesh.png";
+import coldplay from "./coldplay.png";
+import harsh from "./harsh.png";
+
 const artists = [
-  { id: 1, name: "Arijit Singh", img: "arijit.jpg" },
-  { id: 2, name: "RJ Mahvish", img: "mahvish.jpg" },
-  { id: 3, name: "Coldplay", img: "coldplay.jpg" },
-  { id: 4, name: "Harsh Gujral", img: "harsh.jpg" },
+  { id: 1, name: "Arijit Singh", img: arijit },
+  { id: 2, name: "RJ Mahvish", img: mahvesh },
+  { id: 3, name: "Coldplay", img: coldplay },
+  { id: 4, name: "Harsh Gujral", img: harsh },
 ];
 
 const TrendingArtists = () => {
